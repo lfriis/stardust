@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const HomeScreen = (): JSX.Element => {
+	return (
+		<SafeAreaView>
+			<Text>Home Screen!</Text>
+		</SafeAreaView>
+	);
+};
+
+const AccountScreen = (): JSX.Element => {
+	return (
+		<SafeAreaView>
+			<Text>Account Screen</Text>
+		</SafeAreaView>
+	);
+};
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Text>Wohoooooooo first Typescript App!</Text>
-			<StatusBar style='auto' />
-		</View>
+		<NavigationContainer>
+			<Tab.Navigator>
+				<Tab.Screen name="Home" component={HomeScreen} />
+				<Tab.Screen name="Account" component={AccountScreen} />
+			</Tab.Navigator>
+		</NavigationContainer>
 	);
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-});
+// https://thinhtran3588.medium.com/make-professional-mobile-apps-with-react-native-and-typescript-introduction-777ba2423c35
