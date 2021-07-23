@@ -1,5 +1,7 @@
 # Project Stardust
 
+### A react-native and typescript application.
+
 Start by downloading the `expo-cli` application globally to your machine:
 
 ```terminal
@@ -39,9 +41,9 @@ $  cd client
 $  npm start
 ```
 
-This command will start the Metro Bundler and display a QR code in the terminal.
+This command will start the _Metro Bundler_ and display a QR code in the terminal.
 
-Use the command line to launch an emulator of your choice: Android, iOS, or web to preview the mobile app.
+Use the command line to launch an emulator of your choice: _Android, iOS, or web_ to preview the app.
 
 You can also scan the QR code with your mobile devices camera which will deploy your app to Expo to preview your changes on your device.
 
