@@ -1,7 +1,5 @@
 # Project Stardust
 
-### A react-native and typescript application.
-
 Start by downloading the `expo-cli` application globally to your machine:
 
 ```terminal
