@@ -1,14 +1,11 @@
 import React from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { Text, SafeAreaView, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Map from './components/Map';
 
 const HomeScreen = (): JSX.Element => {
-	return (
-		<SafeAreaView>
-			<Text>Home Screen!</Text>
-		</SafeAreaView>
-	);
+	return <Map />;
 };
 
 const AccountScreen = (): JSX.Element => {
@@ -31,5 +28,3 @@ export default function App() {
 		</NavigationContainer>
 	);
 }
-
-// https://thinhtran3588.medium.com/make-professional-mobile-apps-with-react-native-and-typescript-introduction-777ba2423c35
