@@ -1,30 +1,27 @@
 import React from 'react';
-import { Text, SafeAreaView, Dimensions } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Map from './components/Map';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import scenes from './scenes/scenes';
 
-const HomeScreen = (): JSX.Element => {
-	return <Map />;
-};
+import MapScreen from './screens/home/index';
 
-const AccountScreen = (): JSX.Element => {
-	return (
-		<SafeAreaView>
-			<Text>Account Screen</Text>
-		</SafeAreaView>
-	);
-};
-
-const Tab = createBottomTabNavigator();
+// const Tab = createBottomTabNavigator();
 
 export default function App() {
 	return (
-		<NavigationContainer>
-			<Tab.Navigator>
-				<Tab.Screen name="Home" component={HomeScreen} />
-				<Tab.Screen name="Account" component={AccountScreen} />
-			</Tab.Navigator>
-		</NavigationContainer>
+		<MapScreen />
+
+		// <NavigationContainer>
+		// 	<Tab.Navigator>
+		// 		<Tab.Screen name="Test" component={Account} />
+		// {/* {scenes.map((scene, i) => {
+		// 	<Tab.Screen
+		// 		key={i}
+		// 		name={scene.name}
+		// 		component={scene.component}
+		// 	/>;
+		// })} */}
+		// 	</Tab.Navigator>
+		// </NavigationContainer>
 	);
 }
