@@ -1,11 +1,6 @@
 import React from 'react';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import scenes from './scenes/scenes';
-
 import MapScreen from './screens/home/index';
-
-// const Tab = createBottomTabNavigator();
+// import scenes from './scenes/scenes';
 
 export default function App() {
 	return (

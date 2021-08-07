@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import mapStyles from '../../styles/mapStyles';
 
 interface IUserRegion {
 	latitude: number;
 	longitude: number;
-	latitudeDelta: number;
-	longtudeDelta: number;
 }
 
 export default function BaseMap(): JSX.Element {
@@ -29,19 +28,18 @@ export default function BaseMap(): JSX.Element {
 	// 	longtudeDelta: 0.042,
 	// });
 
-	console.log(userRegion);
-
 	return (
 		<>
 			<MapView
-				style={{ flex: 1 }}
+				provider={PROVIDER_GOOGLE}
 				region={{
-					latitude: 37.78825,
-					longitude: -122.4324,
-					latitudeDelta: 0.0922,
-					longitudeDelta: 0.0421,
+					latitude: 43.653226,
+					longitude: -79.3831843,
+					latitudeDelta: 0.04,
+					longitudeDelta: 0.05,
 				}}
-				showsUserLocation={true}
+				style={mapStyles.base}
+				showsUserLocation
 			/>
 			{/* <RadiusSlider /> */}
 		</>
