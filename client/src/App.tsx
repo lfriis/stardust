@@ -1,10 +1,10 @@
 import React from 'react';
-import MapScreen from './screens/home/index';
+import Home from './screens/home/index';
 // import scenes from './scenes/scenes';
 
 export default function App() {
 	return (
-		<MapScreen />
+		<Home />
 
 		// <NavigationContainer>
 		// 	<Tab.Navigator>
