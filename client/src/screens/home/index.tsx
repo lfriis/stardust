@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { View } from 'react-native';
+import { View, Button } from 'react-native';
 import * as Location from 'expo-location';
 import Map from '../../components/map/Map';
-import FromDestinationSearch from '../../components/map/FromDestinationSearch';
-import ToDestinationSearch from '../../components/map/ToDestinationSearch';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+// import FromDestinationSearch from '../../components/map/FromDestinationSearch';
+// import ToDestinationSearch from '../../components/map/ToDestinationSearch';
 import mapStyles from '../../styles/mapStyles';
 import { CoordinateProps } from '../../interfaces';
 
 const HomeScreen = () => {
 	const [fromDestination, setFromDestination] = useState<CoordinateProps>({
-		latitude: 37.785834,
-		longitude: -122.406417,
+		latitude: 0,
+		longitude: 0,
 	});
 	const [toDestination, setToDestination] = useState<CoordinateProps>();
 
@@ -44,8 +46,27 @@ const HomeScreen = () => {
 					latitude={fromDestination.latitude}
 					longitude={fromDestination.longitude}
 				/>
-				<FromDestinationSearch setFromLocation={setFromDestination} />
-				<ToDestinationSearch setToLocation={setToDestination} />
+				{/* <FromDestinationSearch setFromLocation={setFromDestination} /> */}
+				{/* <ToDestinationSearch setToLocation={setToDestination} /> */}
+				<View
+					style={{
+						position: 'absolute',
+						left: 13,
+						bottom: 13,
+						backgroundColor: 'transparent',
+					}}
+				>
+					<MaterialCommunityIcons.Button
+						name="map-search"
+						size={30}
+						color={'#5f5f5f'}
+						backgroundColor={'white'}
+						borderRadius={10}
+						onPress={() => console.log('clicked')}
+					>
+						Search
+					</MaterialCommunityIcons.Button>
+				</View>
 			</View>
 
 			{/* <Slider /> */}
